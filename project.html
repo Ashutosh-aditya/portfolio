@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/utils.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+      .custom-button {
+        background-color: grey;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      .custom-button:hover {
+        background-color: black;
+      }
+
+      .custom-link {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; 
+  }
+
+  .custom-link:hover {
+    background-color: #388E3C;
+    color: white;
+  }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><h2>My Portfolio</h2></a>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="article.html">Article<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="project.html">Project <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="contact.html">Contact <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="m-auto content max-width-1 my-2">
+      <div class="content-left">
+        <h1 style="padding-right: 25%;">E-Commerce Website</h1>
+        <p>
+          <h2>Website Name: <strong>Greeny</strong></h2>
+          <div id="content">
+            <strong>Description:</strong>
+            <ul>
+              <li>Greeny is an e-commerce website developed using HTML, CSS, JavaScript, PHP, and MySQL, featuring admin controls.</li>
+            </ul>
+            <button id="show-more-button" class="custom-button"  style="margin-left:0% ;margin-right: 75%;">Show More</button><br>
+            <div id="additional-content" style="display: none;">
+              <h3><br>User-Friendly Frontend:</h3>
+              <ul>
+                <li>Responsive design for seamless shopping on various devices.</li>
+                <li>Intuitive navigation, user accounts, shopping cart.</li>
+              </ul>
+              <h3>Admin Controls:</h3>
+              <ul>
+                <li>Product management (add, edit, delete).</li>
+                <li>Order management and processing.</li>
+                <li>Inventory control and stock level tracking.</li>
+              </ul>
+              <h3>Backend Functionality:</h3>
+              <ul>
+                <li>MySQL database for data organization.</li>
+                <li>PHP for server-side scripting.</li>
+                <li>JavaScript for enhanced user interactivity.</li>
+              </ul>
+            </div>
+          </div>
+        </p>
+        <div class="content-right"><br>
+          <a href="https://github.com/Ashutosh-aditya/Plant-Selling-Ecommerce-Website" class="custom-link">Link to Repository</a>
+        </div>
+      </div>
+      <div class="content-right">
+        <img src="img/4.png" alt="iBlog" />
+      </div>
+    </div>
+    <div class="max-width-1 m-auto">
+      <hr />
+    </div>
+
+    <div class="m-auto content max-width-1 my-2" style="display: flex; align-items: center;">
+      <div class="content-right" style="flex: 1;">
+        <img src="img/5.jpg" alt="Analog Clock" style="width: 100%;" />
+      </div>
+      <div class="content-left" style="flex: 1;">
+        <h1 style="padding-right: 50%;"><strong>Analog Clock Application</strong></h1>
+        <p>
+          <p>This analog clock application is designed using C++ and OpenGL (GLUT) to display an interactive analog clock.</p>
+          <button id="show-more-button-2" class="custom-button" style="margin-left:60% ;margin-right: 10%;">Show More</button><br>
+          <div id="additional-content-2" style="display: none;">
+            <h2><p>It features:</p></h2>
+            <h2>Clock Display:</h2>
+            <ul>
+              <li>The clock features three hands: hour, minute, and second, which rotate to show the current time.</li>
+              <li>The clock face is divided into 12 segments, with either Roman numerals or digits for hour representation, depending on user preference.</li>
+            </ul>
+            <h2>Interactive Options:</h2>
+            <ul>
+              <li>Users can choose the color of the clock hands from a context menu (Orange, Green, or Blue).</li>
+              <li>A context menu also allows users to toggle between Roman numerals and digits for hour representation.</li>
+            </ul>
+          </div>
+          <div>
+            <a href="https://github.com/Ashutosh-aditya/CG-project" class="custom-link">Link to Repository</a>
+          </div>
+        </p>
+      </div>
+    </div>
+
+    <div class="max-width-1 m-auto">
+      <hr />
+    </div>
+
+    <script>
+      const showMoreButton = document.getElementById('show-more-button');
+      const additionalContent = document.getElementById('additional-content');
+
+      showMoreButton.addEventListener('click', () => {
+        if (additionalContent.style.display === 'none') {
+          additionalContent.style.display = 'block';
+          showMoreButton.textContent = 'Show Less';
+        } else {
+          additionalContent.style.display = 'none';
+          showMoreButton.textContent = 'Show More';
+        }
+      });
+
+      const showMoreButton2 = document.getElementById('show-more-button-2');
+      const additionalContent2 = document.getElementById('additional-content-2');
+
+      showMoreButton2.addEventListener('click', () => {
+        if (additionalContent2.style.display === 'none') {
+          additionalContent2.style.display = 'block';
+          showMoreButton2.textContent = 'Show Less';
+        } else {
+          additionalContent2.style.display = 'none';
+          showMoreButton2.textContent = 'Show More';
+        }
+      });
+    </script>
+  </body>
+</html>
